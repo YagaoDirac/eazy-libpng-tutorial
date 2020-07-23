@@ -1,3 +1,9 @@
+//This is modified from https://github.com/omarSSelim/libpng-tutorial
+//I modified it into cpp style, emmm, not very completely. 
+//And then save to https://github.com/YagaoDirac/eazy-libpng-tutorial
+//Remember to follow the original author, star his repo.
+
+
 #define _CRT_SECURE_NO_DEPRECATE
 
 #include <stdio.h>

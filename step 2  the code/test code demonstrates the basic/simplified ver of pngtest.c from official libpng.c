@@ -1,3 +1,8 @@
+//This file is modified from official package from libpng.
+//The file is named pngtest.c
+//I simplified it, and then save to https://github.com/YagaoDirac/eazy-libpng-tutorial
+//For more info, http://libpng.org/
+
 #define _CRT_SECURE_NO_WARNINGS//I added this line to surpress the warning to fopen( the correct way is to replace fopen with fopen_s)
 
 #define _POSIX_SOURCE 1
