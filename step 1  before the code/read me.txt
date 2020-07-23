@@ -1,0 +1,66 @@
+Png is a image file format. It is maintained by a group. The website is libpng.org.
+This group provides a set of tool to handle .png files. The tool is named libpng. It's developped in language of C.
+The group upload the files to sourceforge. When you try downloading the files, the page should be transferred to sourceforge.
+
+In my reporitory, a c style version from
+https://github.com/omarSSelim/libpng-tutorial
+was modified to pure c++ style, very ez to use. It provides only one feature which saves info from memory in files.
+
+In another file, the code is simplified from the pngtest.c provided by the official png org. I unrolled all the macros, removed all code which you don't need to see. In this version, almost all the feature in libpng 1.6.37 are keeped. The code reads a .png file, uncompresses it, modifies some of the pixils, save it back to another .png file.
+
+How to install libpng?
+https://www.youtube.com/watch?v=GsgSnSG0O0U
+
+Other info?
+http://www.libpng.org/pub/png/libpng.html
+and ctrl F, search for "Manual".
+
+Known trouble when install
+1, https://cmake.org/download/
+when download cmake, choose *.msi to get the UI version.
+
+2, The tutorial video shows the path for vs2015. But if you install 2017 or 2019 instead, the path is different. The eazist way to figure it out is to go through those seconds when the youtuber opens all the folders. Reference the neibour folders to figure out your path. Further, for 2017, the most inner part for the path is comfusing. I simply randomly chose and it worked.
+
+3, Cmake is very ez to use. Generally, copy the source code to a new folder, create a new folder inside it, name it "build". Specify the 2 paths in the top of cmake window. The 2 paths should look something like, ???/zlib and  ???/zlib/build.
+Now notice the buttons in the bottom. Click the left most one. In the popup, different version of visual studio provides different default setting. If you use visual studio 2017, you need to specify "x64" in the second text editor(2019 antomatically specify x64 if you leave that text editor empty). If you don't do that, some of the vs would probably privide a x86 version. It should be OK as well, but if you mean to do what ever the same as the tutorial video, specify it manually.
+
+4, When it comes to build libpng, you might encounter an error info which looks like "../../../zlib/????.c" does not exist. All you need to do is set up the folders to match the ../../../zlib/ and paste all the files in original zlib folder to the new place. The error should then disappear.
+
+5, In fact, if you only read and write png files, you need only a very limited subset of the whole features in libpng. So, read my simplified version directly.
+
+
+
+
+
+Png是一个图片文件格式。由一个小组维护。网站是libpng.org
+这个小组提供操作png文件的工具集。工具的名字叫libpng，用C语言开发。
+这个小组把文件上传到了sourceforge。当你下载的时候，页面会跳转到sourceforge。
+
+在我的代码库中，从
+https://github.com/omarSSelim/libpng-tutorial
+来的一个C风格的代码被修改到了c++风格。很易用。提供了把内存里面的图片信息保存到文件里的功能。
+ 
+另外一个文件是，我从官方提供的pngtest.c文件，简而来。我展开了所有的宏，移除了所有你不需要看的代码。在这个版本里几乎所有的libpng 1.6.37的特性都被保留了。代码读一个png文件，解压，修改一些像素，存到另外一个png文件里。
+
+如何安装？
+https://www.youtube.com/watch?v=GsgSnSG0O0U
+
+其他信息？
+http://www.libpng.org/pub/png/libpng.html
+ctrl F, 搜"Manual"。
+
+已知的问题：
+1，https://cmake.org/download/
+下载 .msi 结尾的文件，这个是有ui的版本。
+
+2，教程视频展示了vs2015对应的路径。但是如果你是用2017或者2019，路径是不同的。最简单的方法就是看视频里面他点开的文件夹，根据邻居文件夹的情况，来判断。对vs2017，最里面的2级文件夹非常容易混淆。我随机的选了一个路径，居然就直接搞定了。
+
+3，Cmake很好用。通常，把下载到的源码复制一份，在里面见一个叫“build”的文件夹。制定cmake里面最上面2个路径，他们看起来应该像是 ???/zlib 和 ???/zlib/build。
+现在点下面的最左边的按钮，在弹出的窗口里面，不同的vs版本有不同的默认设定。如果用的是vs2017，你需要在第二个文本框里面写“x64”（vs2019是自动给这一栏一个x64的默认值）如果你不这么做，应该也可以，只不过应该就得到了一个x86的版本。如果你希望完全和视频教程里面的一样，那就手动指定。
+
+4，编译libpng的时候，你可能会遇到一个问题，看起来像"../../../zlib/????.c"文件不存在。你需要做的是，根据这个提示，新建文件化，把zlib里面的全部文件复制过来。这个问题应该就解决了。
+
+5，事实上，如果你只是读写png文件，那么你只需要一个非常小的libpng功能子集。所以你可以直接读我简化过的文件。
+
+
+
