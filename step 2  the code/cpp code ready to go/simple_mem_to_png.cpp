@@ -131,12 +131,11 @@ simple_mem_to_png::error_type simple_mem_to_png::save_to_file(const char* filena
 	png_write_png(png_ptr, info_ptr, PNG_TRANSFORM_IDENTITY, NULL);
 
 	//clear
+	delete[]row_pointers;
 	png_destroy_write_struct(&png_ptr, &info_ptr);
 	fclose(fp);
-
 	//return
 	return error_type::OK;
-
 }//function def save_to_file
 
 
